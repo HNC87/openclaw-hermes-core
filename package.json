@@ -1,0 +1,40 @@
+{
+  "name": "hermes-core",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/index.js",
+  "files": [
+    "src",
+    "skills",
+    "test",
+    "package.json",
+    "jest.config.js",
+    "openclaw.plugin.json"
+  ],
+  "openclaw": {
+    "id": "hermes-core",
+    "extensions": [
+      "./src/index.js"
+    ]
+  },
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:unit": "npm test -- --testPathPattern=unit",
+    "test:integration": "npm test -- --testPathPattern=integration",
+    "test:coverage": "npm test -- --coverage"
+  },
+  "dependencies": {
+    "@sinclair/typebox": "^0.34.0",
+    "better-sqlite3": "^11.10.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^20.19.39",
+    "jest": "^29.7.0"
+  },
+  "peerDependencies": {
+    "openclaw": "*"
+  },
+  "license": "MIT"
+}

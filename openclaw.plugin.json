@@ -1,0 +1,101 @@
+{
+  "id": "hermes-core",
+  "name": "Hermes Core Integration",
+  "description": "Adds self-learning loop and four-layer memory architecture from Hermes Agent",
+  "version": "1.0.0",
+  "capabilities": {
+    "selfLearning": true,
+    "fourLayerMemory": true,
+    "skillGeneration": true
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "memory": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "max_memory_size": {
+            "type": "integer",
+            "description": "MEMORY.md character limit",
+            "default": 2200
+          },
+          "max_user_size": {
+            "type": "integer",
+            "description": "USER.md character limit",
+            "default": 1375
+          },
+          "memory_path": {
+            "type": "string",
+            "description": "Path to memory files",
+            "default": "~/.openclaw/hermes/memories/"
+          }
+        }
+      },
+      "learning": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "min_tool_calls": {
+            "type": "integer",
+            "description": "Minimum tool calls to trigger skill generation",
+            "default": 5
+          },
+          "auto_skill_generation": {
+            "type": "boolean",
+            "description": "Enable automatic skill generation",
+            "default": true
+          },
+          "nudge_interval": {
+            "type": "integer",
+            "description": "Memory reminder interval in seconds, 0=disabled",
+            "default": 300
+          }
+        }
+      },
+      "session_archive": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "db_path": {
+            "type": "string",
+            "description": "Path to SQLite session database",
+            "default": "~/.openclaw/hermes/session.db"
+          },
+          "fts5_enabled": {
+            "type": "boolean",
+            "description": "Enable FTS5 full-text search",
+            "default": true
+          },
+          "retention_days": {
+            "type": "integer",
+            "description": "Session retention period in days",
+            "default": 90
+          }
+        }
+      },
+      "auxiliary": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "description": "Enable auxiliary model routing",
+            "default": false
+          },
+          "cheap_model": {
+            "type": "string",
+            "description": "Cheap model for simple tasks",
+            "default": "minimax/MiniMax-M2.7"
+          },
+          "expensive_model": {
+            "type": "string",
+            "description": "Expensive model for complex reasoning",
+            "default": "deepseek/deepseek-reasoner"
+          }
+        }
+      }
+    }
+  }
+}
