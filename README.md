@@ -8,6 +8,7 @@ Hermes Core is an OpenClaw plugin that adds self-learning capabilities and four-
 - **Self-Learning Loop**: Automatically generates skills from complex task execution
 - **Session Search**: FTS5-based full-text search of conversation history
 - **Memory Management**: Persistent storage of user preferences and environment facts
+- **Profit Factor Analysis**: Mining trading data to discover profitable patterns and factors
 
 ## Compatibility
 
