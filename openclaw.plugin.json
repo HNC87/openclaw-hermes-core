@@ -3,6 +3,10 @@
   "name": "Hermes Core Integration",
   "description": "Adds self-learning loop and four-layer memory architecture from Hermes Agent",
   "version": "1.0.0",
+  "compatibility": {
+    "openclaw": ">=2026.4.0",
+    "typebox": "^0.34.0"
+  },
   "capabilities": {
     "selfLearning": true,
     "fourLayerMemory": true,
