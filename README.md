@@ -90,27 +90,39 @@ In `~/.openclaw/openclaw.json`:
 | `session_search` | Search conversation history using full-text search (FTS5) |
 | `memory_manage` | Read/write to USER.md and MEMORY.md memory files |
 | `skill_manage` | Create, update, and manage reusable agent skills |
+| `trading_factors_query` | Query learned trading profit factors from LobsterQuant |
 
 ### Tool Usage Examples
 
 **Session Search:**
-```
+
+```text
 用 session_search 搜索 "上次讨论的交易策略"
 ```
 
 **Memory Management:**
-```
+
+```text
 用 memory_manage 读取 memory 内容
 用 memory_manage 追加内容到 MEMORY.md
 用 memory_manage 查看统计信息
 ```
 
 **Skill Management:**
-```
+
+```text
 用 skill_manage 创建一个 skill，名字是 xxx，描述是 xxx
 用 skill_manage 列出所有 skills
 用 skill_manage 读取某个 skill 内容
 用 skill_manage 更新已有 skill
+```
+
+**Trading Factors Query:**
+
+```text
+用 trading_factors_query 查看交易时段盈利因子摘要
+用 trading_factors_query 查询最近交易记录
+用 trading_factors_query 分析 RSI 指标表现
 ```
 
 ## Self-Learning

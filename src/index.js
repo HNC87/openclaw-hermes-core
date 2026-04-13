@@ -22,6 +22,7 @@ import { afterToolCallHook, agentEndHook } from './hooks/learning-hooks.js';
 import { sessionSearchTool } from './tools/session-search.js';
 import { memoryManageTool } from './tools/memory-manage.js';
 import { skillManageTool } from './tools/skill-manage.js';
+import { tradingFactorsQueryTool } from './tools/trading-factors-query.js';
 import { SemanticMemory } from './memory/semantic-memory.js';
 import { ContextCompressor } from './memory/context-compressor.js';
 import { Planner } from './learning/planner.js';
@@ -356,6 +357,7 @@ const hermesCorePlugin = {
     api.registerTool(sessionSearchTool);
     api.registerTool(memoryManageTool);
     api.registerTool(skillManageTool);
+    api.registerTool(tradingFactorsQueryTool);
 
     // Register New Advanced Tools
     api.registerTool(semanticMemoryTool);
@@ -371,6 +373,7 @@ export default hermesCorePlugin;
 // Exports for external access
 export { HermesContextEngine } from './context-engine/hermes-context-engine.js';
 export { skillManageTool } from './tools/skill-manage.js';
+export { tradingFactorsQueryTool } from './tools/trading-factors-query.js';
 export { TriggerDetector } from './learning/trigger-detector.js';
 export { SemanticMemory } from './memory/semantic-memory.js';
 export { ContextCompressor } from './memory/context-compressor.js';
